@@ -1,0 +1,36 @@
+﻿<Window x:Class="Praktika3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktika3"
+        mc:Ignorable="d"
+        Title="Главная страницы" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="65*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="1" Margin="65.660,0,140,0">
+            <StackPanel>
+                <TextBlock Margin="8,0">Поиск</TextBlock>
+                <TextBox x:Name="TbPoisk" Width="250" Height="30" Margin="7,0"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center">Сортировка</TextBlock>
+                <ComboBox Name="CbSortir" Height="30" Width="110" Margin="7,0"></ComboBox>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" RenderTransformOrigin="1.652,0.719"/>
+            </StackPanel>
+        </StackPanel>
+        <Frame Name="MainFrame" Grid.Row="1" Grid.ColumnSpan="2"></Frame>
+        <ComboBox x:Name="CBfilter" Margin="540,15,65,15" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Center" RenderTransformOrigin="1.652,0.719" Grid.Column="1" Margin="556,0,65,45" Width="94"><Run Text="Фильтрация"/></TextBlock>
+        
+    </Grid>
+</Window>
